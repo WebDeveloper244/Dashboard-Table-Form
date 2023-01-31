@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="row">
+        <h3>Bexbury LTD</h3>
+    </div>
+    <div class="row">
+        <div class="background bg-light pt-1">
+            <h3>Timesheet</h3>
+        </div>
+    </div>
+    <form onsubmit="submitFormValue(); return false ">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="exampleFormControlSelect1" class="my-3">Candidate</label>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group my-3">
+                        <select class="form-select form-select-sm mb-3 py-2" aria-label=".form-select-lg example">
+                            <option selected>Choose..</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                      </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            <!--  -->
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="" class="my-3">Use Margin Fee</label>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group my-3">
+                        <select class="form-select form-select-sm mb-3 py-2" aria-label=".form-select-sm example">
+                            <option selected>Choose..</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                      </div>
+                  
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            <!--  -->
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="" class="my-3">Company Margin</label>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group my-3">
+                        <input type="text" class="form-control rounded-0">
+                        <span class="input-group-text rounded-0">£</span>
+                      </div>
+            </div>
+            <div class="col-md-6"></div>
+            </div>
+            <!--  -->
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="" class="my-3">Total Ts Value</label>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group my-3">
+                        <input type="text" class="form-control rounded-0" >
+                        <span class="input-group-text rounded-0">£</span>
+                      </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            <!--  -->
+            <div class="row">
+                <div class="col-md-2 my-3">
+                    <label for="">Gross Amount</label>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group my-3">
+                        <input type="number" class="form-control rounded-0" id="GrossAmount">
+                        <span class="input-group-text rounded-0">£</span>
+                      </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h3>Timesheet</h3>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                  <!-- Table -->
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                         <tr>
+                           <th scope="col">From</th>
+                           <th scope="col">To</th>
+                           <th scope="col">Unit</th>
+                           <th scope="col">Rate</th>
+                           <th scope="col">TotalPay</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <th scope="row" colspan="5" class="text-center pink"><span>+ Add New</span></th>
+                         </tr>
+                         
+                       </tbody>
+                     </table>
+                </div>
+                </div>
+            </div>
+            
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h3>Deductions</h3>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                     <!-- Table -->
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="table-light">
+                         <tr>
+                           <th scope="col">Deductions</th>
+                           <th scope="col">From</th>
+                           <th scope="col">To</th>
+                           <th scope="col">Unit</th>
+                           <th scope="col">Rate</th>
+                           <th scope="col">Total</th>
+                         </tr>
+                       </thead>
+                       <tbody>
+                         <tr>
+                           <th scope="row" colspan="6" class="text-center pink"><span >+ Add New</span></th>
+                           
+                         </tr>
+                         
+                       </tbody>
+                     </table>
+                </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                    <label for="" class="my-3">Phone</label>
+                </div>
+                <div class="col-md-4">
+                    <div class="my-3">
+                        <div class="input-group mb-3">
+                            <div class="image border border-dark">
+                                <img src="./image/uk.png" alt="" srcset="" class="image-fluid ukImage">
+                            </div>
+                            <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span>+44</span>
+                            </button>
+                            <ul class="dropdown-menu text-center">
+                              <li><a class="dropdown-item" href="#">+92</a></li>
+                              <li><a class="dropdown-item" href="#"> -91</a></li>
+                              <li><a class="dropdown-item" href="#">+34</a></li>
+                            </ul>
+                            <input type="tel" class="form-control rounded-0" aria-label="Text input with segmented dropdown button" placeholder="Phone Number">
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+              </div>
+              <div class="row">
+                <div class="col-md-2">
+                    <label for="" class="my-3">Agency</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control mb-2 my-3 rounded-0" id="inlineFormInputName2" placeholder="Jane Doe">
+                </div>
+                <div class="col-md-6"></div>
+              </div>
+              <div class="my-3">
+                <hr>
+              </div>
+              <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                   <div class="buttons mb-3">
+                    <button type="submit" class="btnPink btn">Submit</button> 
+                </div>
+                <div class="col-md-6"></div>
+              </div>
+            </form>
+    </div>
+
+    
+</body>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/8cb22729e7.js" crossorigin="anonymous"></script>
+<!-- js -->
+<script src="index.js"></script>
+</html>
+
+
